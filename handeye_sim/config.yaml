@@ -1,0 +1,40 @@
+aruco_dictionary_name: "DICT_ARUCO_ORIGINAL"
+aruco_marker_side_length: 0.150
+camera_calibration_parameters_filename: "src/handeye_sim/camera_info.yaml"
+image_topic: "/camera/image_raw"
+aruco_marker_name: "aruco_marker"
+calculated_camera_optical_frame_name: "camera_sim_optical"
+marker_data_file_name: "src/handeye_sim/resource/marker_data_simulation.yaml"
+image_filename: "src/handeye_sim/resource/marker_pose_simulation_{pose_count}.jpg"
+robot_data_file_name: "src/handeye_sim/resource/robot_data_simulation.yaml"
+handeye_result_file_name: "src/handeye_sim/resource/handeye_result_simulation.yaml"
+handeye_result_profile_file_name: "src/handeye_sim/resource/handeye_result_simulation_profile.yaml"
+
+base_link: "lbr/link_0"
+ee_link: "lbr/link_ee"
+world_frame: "world"
+
+link_order_publish_marker:
+  - ['world', 'lbr/world']
+  - ['lbr/world', 'lbr/link_0']
+  - ['lbr/link_0', 'lbr/link_1']
+  - ['lbr/link_1', 'lbr/link_2']
+  - ['lbr/link_2', 'lbr/link_3']
+  - ['lbr/link_3', 'lbr/link_4']
+  - ['lbr/link_4', 'lbr/link_5']
+  - ['lbr/link_5', 'lbr/link_6']
+  - ['lbr/link_6', 'lbr/link_7']
+  - ['lbr/link_7', 'lbr/link_ee']
+  - ['lbr/link_ee', 'camera_optical_sim']
+
+link_order_publish_eye2hand:
+  - ['world', 'lbr/world']
+  - ['lbr/world', 'lbr/link_0']
+  - ['lbr/link_0', 'lbr/link_1']
+  - ['lbr/link_1', 'lbr/link_2']
+  - ['lbr/link_2', 'lbr/link_3']
+  - ['lbr/link_3', 'lbr/link_4']
+  - ['lbr/link_4', 'lbr/link_5']
+  - ['lbr/link_5', 'lbr/link_6']
+  - ['lbr/link_6', 'lbr/link_7']
+  - ['lbr/link_7', 'lbr/link_ee']
